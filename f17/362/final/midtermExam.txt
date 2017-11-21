@@ -1,0 +1,15 @@
+Q1:
+
+Part-1) These examples are not enough for me to be satisfied with my understanding of the program's expected output. The following are questions that I still have:
+
+-What should the output be if out.txt contains the string from in.txt more than once in the same line? For example, in Example-1, if out.txt contains "Welcome to CS362, CS362" would the that line only be output once, or would it be printed once for each instance of CS362? (This is necessary to check the accuracy of the program output)
+
+-Is there a maximum number of lines that out.txt can contain? A maximum number of occurrences of the input string? A maximum number of characters in the string? (These questions would help me determine the bounds of my random number generators described below)
+
+-What happens if there is overlap of the input string? For example, if in.txt contains "racecar" and out.txt contains "racecaracecar", would that be treated as two separate occurrences of the input string or just one? Since the first 'r' of the second occurrence has already been counted as the last 'r' of the first.
+
+Part-2)
+
+I would use a random test generator to test paraphrase. First, a random string of random length (1-x) would be created and printed to in.txt. Next out.txt would be built by printing random characters (0-x) to a random number of lines (1-x), with the input string randomly strewn throughout (0-x occurrences total), appearing 0-5 times per line. Each time the input string was added to out.txt, a counter would be incremented to get the expected number of lines printed (this counter would be handled differently, depending on the answer to my first question above. The idea is that multiple runs of this random tester (perhaps several hundred to a couple thousand) would test a wide array of combinations with various counts of the input string in the whole out.txt, as well as various counts on each line. If there is a max bound for each of the parameters discussed in my second question above, they would be incorporated to make this test run as quickly as possible, allowing as many runs as possible.
+Using my random test above, for each run of the test, the number of lines output by paraphrase would be counted and compared to the expected number obtained from the counter.
+gcov would be used to get the coverage of my random tester in the paraphrase program. Line and branch coverage could easily be printed to another text file, and the paraphrase.c.gcov file could be used to manually inspect coverage as well. If coverage was not ideal, more runs of the random tester could be added to cover more scenarios.

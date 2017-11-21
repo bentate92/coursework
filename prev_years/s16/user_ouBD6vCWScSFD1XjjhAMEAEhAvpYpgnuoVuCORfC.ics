@@ -1,0 +1,867 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:PUBLISH
+X-WR-CALDESC:Calendar events for the user\, Benjamin Tate
+X-WR-CALNAME:Benjamin Tate Calendar (Canvas)
+CALSCALE:GREGORIAN
+PRODID:iCalendar-Ruby
+BEGIN:VEVENT
+DESCRIPTION: Programming assignments are due on Sundays before 23:59. Pleas
+ e do not start at the last minute.\n\n    You must submit each assignment t
+ o two places ( otherwise it will not be graded )  –\n\n    a. TEACH – your 
+ code must compile there . Submit it via -\n\nhttps://secure.engr.oregonstat
+ e.edu:8000/teach.php?type=want_auth\n\nPlease don't submit the assignments 
+ in zipped format in TEACH . They will not be graded.\n\n    b. Canvas – for
+  documentation and grading\n\n   The grade will be published within a week 
+ from the due date . You must contact with the instructor or the TAs within 
+ one week after the grade has been published. Your grade will not be updated
+  after that period.\n\n [Assignment 0 _Fall2015-1.pdf](https://oregonstate.
+ instructure.com/courses/1583013/files/64298434/download?wrap=1)[](https://o
+ regonstate.instructure.com/courses/1583013/files/64298137/download?wrap=1)\
+ n\n 
+DTEND;VALUE=DATE:20160403
+DTSTAMP:20160330T220900Z
+DTSTART;VALUE=DATE:20160403
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Assignment 0 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729262
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729262
+X-ALT-DESC;FMTTYPE=text/html:<p><span> Programming assignments are due on S
+ undays before 23:59. Please do not start at the last minute.</span></p>\n<p
+ ><br>    You <span style="font-size: medium\;"><strong>must</strong></span>
+  submit each assignment to two places ( <strong>otherwise it will not be gr
+ aded</strong> )  –</p>\n<p><br>    a. TEACH – y<span style="font-size: 14px
+ \;">our code must compile there . Submit it via -</span></p>\n<p><a id="" c
+ lass="" title="" href="https://secure.engr.oregonstate.edu:8000/teach.php?t
+ ype=want_auth" target="">https://secure.engr.oregonstate.edu:8000/teach.php
+ ?type=want_auth</a></p>\n<p><strong>Please don't submit the assignments in 
+ zipped format in TEACH . They will not be graded.</strong></p>\n<p><br>    
+ b. Canvas – for documentation and grading</p>\n<p><span>   The grade will b
+ e published within a week from the due date . You must contact with the ins
+ tructor or the TAs within one week after the grade has been published. Your
+  grade will not be updated after that period.</span></p>\n<p> <a id="" clas
+ s=" instructure_scribd_file instructure_file_link" title="Assignment 0 _Fal
+ l2015-1.pdf" href="https://oregonstate.instructure.com/courses/1583013/file
+ s/64298434/download?wrap=1" data-api-endpoint="https://oregonstate.instruct
+ ure.com/api/v1/courses/1583013/files/64298434" data-api-returntype="File">A
+ ssignment 0 _Fall2015-1.pdf</a><span><a id="" class=" instructure_scribd_fi
+ le instructure_file_link" title="Assignment 0 _Spring2015.pdf" href="https:
+ //oregonstate.instructure.com/courses/1583013/files/64298137/download?wrap=
+ 1" data-api-endpoint="https://oregonstate.instructure.com/api/v1/courses/15
+ 83013/files/64298137" data-api-returntype="File"></a></span></p>\n<p> </p>
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:There's a six-hour time limit.
+DTEND;VALUE=DATE:20160403
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160403
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Summary Exercise - Week 1 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_4
+ 00_S2016)]
+UID:event-assignment-6730309
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=04&year=2016#assignment_6730309
+X-ALT-DESC;FMTTYPE=text/html:<p><span>There's a six-hour time limit.</span>
+ </p>
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:You will be able to access the Week 1 materials AFTER receiving
+  100% on this quiz!
+DTEND;VALUE=DATE:20160403
+DTSTAMP:20160326T174100Z
+DTSTART;VALUE=DATE:20160403
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Syllabus Quiz [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2016)]
+UID:event-assignment-6730322
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=04&year=2016#assignment_6730322
+X-ALT-DESC;FMTTYPE=text/html:<p>You will be able to access the Week 1 mater
+ ials AFTER receiving 100% on this quiz!</p>
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Worksheet Submission should be done by groups (not individual) 
+ . You can only submit the worksheets via Canvas. \n\n \n\nI will be creatin
+ g worksheet groups for you. Contact with your group members as soon as poss
+ ible and please send us an email ( one from each group)  mentioning the sta
+ tus of your group and how you are going to communicate with your group memb
+ ers ( in addition to Canvas discussion board students preferred to use Goog
+ le Hangout\, IM or in person meetings) by the end of week 1.  We will consi
+ der it as the first meeting minutes and grade it .\n\n  In each worksheet y
+ ou are instructed to provide the contextual information only. No extra sour
+ ce code is required unless mentioned in the instructions. In addition\, fro
+ m  week 2\,  you must submit minutes on Piazza discussion board each week .
+  An example from the previous term is as followed -\n\n[Group Collaboration
+  Summary Week 1.pdf](https://oregonstate.instructure.com/courses/1583013/fi
+ les/64298438/download?wrap=1)[[Preview the document](https://oregonstate.in
+ structure.com/images/preview.png)](https://oregonstate.instructure.com/cour
+ ses/1583013/files/64298438/download?wrap=1)[[View in a new window](https://
+ oregonstate.instructure.com/images/popout.png)](https://oregonstate.instruc
+ ture.com/courses/1583013/files/64298438/download?wrap=1)\n\n[](https://oreg
+ onstate.instructure.com/courses/1583013/files/64298396/download?wrap=1)[[Vi
+ ew in a new window](https://oregonstate.instructure.com/images/popout.png)]
+ (https://oregonstate.instructure.com/courses/1583013/files/64298396/downloa
+ d?wrap=1)\nWorksheets are due on the Saturdays of each week. No late worksh
+ eets will be graded. You will receive the grade by Wednesdays of the next w
+ eek.
+DTEND;VALUE=DATE:20160404
+DTSTAMP:20160329T214500Z
+DTSTART;VALUE=DATE:20160404
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet minutes submission  [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729304
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729304
+X-ALT-DESC;FMTTYPE=text/html:<p>Worksheet Submission should be done by grou
+ ps (not individual) . You can only submit the worksheets via Canvas. </p>\n
+ <p> </p>\n<p>I will be creating worksheet groups for you. Contact with your
+  group members as soon as possible and please send us an email ( one from e
+ ach group)  mentioning the status of your group and how you are going to co
+ mmunicate with your group members ( in addition to Canvas discussion board 
+ students preferred to use Google Hangout\, IM or in person meetings) by the
+  end of week 1.  We will consider it as the first meeting minutes and grade
+  it .</p>\n<p><br>  In each worksheet you are instructed to provide the con
+ textual information only. No extra source code is required unless mentioned
+  in the instructions. In addition\, from  week 2\,  you must submit minutes
+  on Piazza discussion board each week . An example from the previous term i
+ s as followed -</p>\n<p><span class="instructure_file_link_holder link_hold
+ er"><span class="instructure_scribd_file_holder link_holder"><a class="" ti
+ tle="Group Collaboration Summary Week 1.pdf" href="https://oregonstate.inst
+ ructure.com/courses/1583013/files/64298438/download?wrap=1" data-api-endpoi
+ nt="https://oregonstate.instructure.com/api/v1/courses/1583013/files/642984
+ 38" data-api-returntype="File">Group Collaboration Summary Week 1.pdf</a><a
+  class="scribd_file_preview_link" title="Preview the document" aria-hidden=
+ "true" href="https://oregonstate.instructure.com/courses/1583013/files/6429
+ 8438/download?wrap=1" data-api-endpoint="https://oregonstate.instructure.co
+ m/api/v1/courses/1583013/files/64298438" data-api-returntype="File"><img sr
+ c="https://oregonstate.instructure.com/images/preview.png" alt="Preview the
+  document"></a></span><a title="View in a new window" href="https://oregons
+ tate.instructure.com/courses/1583013/files/64298438/download?wrap=1" target
+ ="_blank" data-api-endpoint="https://oregonstate.instructure.com/api/v1/cou
+ rses/1583013/files/64298438" data-api-returntype="File"><img src="https://o
+ regonstate.instructure.com/images/popout.png" alt="View in a new window"></
+ a></span></p>\n<p><span class="instructure_file_link_holder link_holder"><a
+  class="instructure_scribd_file" title="Group Collaboration Summary Week 1 
+ (1).pdf" href="https://oregonstate.instructure.com/courses/1583013/files/64
+ 298396/download?wrap=1" data-api-endpoint="https://oregonstate.instructure.
+ com/api/v1/courses/1583013/files/64298396" data-api-returntype="File"></a><
+ a title="View in a new window" href="https://oregonstate.instructure.com/co
+ urses/1583013/files/64298396/download?wrap=1" target="_blank" data-api-endp
+ oint="https://oregonstate.instructure.com/api/v1/courses/1583013/files/6429
+ 8396" data-api-returntype="File"><img src="https://oregonstate.instructure.
+ com/images/popout.png" alt="View in a new window"></a></span><br>Worksheets
+  are due on the Saturdays of each week. No late worksheets will be graded. 
+ You will receive the grade by Wednesdays of the next week.</p>
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160409
+DTSTAMP:20160325T221600Z
+DTSTART;VALUE=DATE:20160409
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 0 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729275
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729275
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160409
+DTSTAMP:20160325T221600Z
+DTSTART;VALUE=DATE:20160409
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 14 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729276
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729276
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160409
+DTSTAMP:20160325T221700Z
+DTSTART;VALUE=DATE:20160409
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 15 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729277
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729277
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160409
+DTSTAMP:20160325T221700Z
+DTSTART;VALUE=DATE:20160409
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 16 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729278
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729278
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160409
+DTSTAMP:20160325T222100Z
+DTSTART;VALUE=DATE:20160409
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 21 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729283
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729283
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:[Program 1 (PDF)](https://oregonstate.instructure.com/courses/1
+ 583014/files/64301137/download?wrap=1)\n\nDue: Week 2\, Sunday 11:59 PM Pac
+ ific USA time zone\n\n \n\nObjectives:\n\n* Introduction to MASM assembly l
+ anguage.\n\n* Defining variables (integer and string).\n\n* Using library p
+ rocedures for I/O.\n\n* Integer arithmetic.\n\nRubric: The grading rubric w
+ ill be made available week 2.
+DTEND;VALUE=DATE:20160410
+DTSTAMP:20160329T225700Z
+DTSTART;VALUE=DATE:20160410
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Program #1 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2016)]
+UID:event-assignment-6730345
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=04&year=2016#assignment_6730345
+X-ALT-DESC;FMTTYPE=text/html:<p><a class=" instructure_scribd_file instruct
+ ure_file_link" title="Prog01.pdf" href="https://oregonstate.instructure.com
+ /courses/1583014/files/64301137/download?wrap=1" data-api-endpoint="https:/
+ /oregonstate.instructure.com/api/v1/courses/1583014/files/64301137" data-ap
+ i-returntype="File">Program 1 (PDF)</a></p>\n<p><strong><span style="font-s
+ ize: 12.0pt\; font-family: 'Times New Roman'\,'serif'\;">Due: </span></stro
+ ng><span style="font-size: 12.0pt\; font-family: 'Times'\,'serif'\;">Week 2
+ \, Sunday 11:59 PM Pacific USA time zone</span></p>\n<p> </p>\n<p><strong>O
+ bjectives</strong>:</p>\n<ol style="margin-top: 0in\;" start="1" type="1">\
+ n<li class="MsoNormal" style="margin-bottom: 3.0pt\;">Introduction to MASM 
+ assembly language.</li>\n<li class="MsoNormal" style="margin-bottom: 3.0pt\
+ ;">Defining variables (integer and string).</li>\n<li class="MsoNormal" sty
+ le="margin-bottom: 3.0pt\;">Using library procedures for I/O.</li>\n<li cla
+ ss="MsoNormal" style="margin-bottom: 3.0pt\;">Integer arithmetic.</li>\n</o
+ l>\n<p><strong style="color: #000000\; font-family: Verdana\, Arial\, Helve
+ tica\, sans-serif\; font-size: 12px\; font-style: normal\; font-variant: no
+ rmal\; line-height: normal\; text-align: start\; text-indent: 0px\; white-s
+ pace: normal\; background-color: #ffffff\;">Rubric</strong>: The grading ru
+ bric will be made available week 2.</p>
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION:Please use the files attached here to complete this assignment.
+  When you are finished\, please submit your assignment here and on TEACH to
+  be graded.\n\n \n\nPlease don't submit the assignment in zipped format in 
+ TEACH . \n\n-----------\nAttachments\n-----------\n\n* [Assign1Skeleton_upd
+ ated.zip](https://oregonstate.instructure.com/courses/1583013/files/6433511
+ 8/download?wrap=1)\n\n* [Assignment_1_Instructions_updated-1.pdf](https://o
+ regonstate.instructure.com/courses/1583013/files/64300486/download?wrap=1)\
+ n\n* [Assign1Makefile](https://oregonstate.instructure.com/courses/1583013/
+ files/64298360/preview)
+DTEND;VALUE=DATE:20160410
+DTSTAMP:20160330T072700Z
+DTSTART;VALUE=DATE:20160410
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Programming Assignment 1- C Pointers Practice [DATA STRUCTURES (CS_
+ 261_400_S2016)]
+UID:event-assignment-6729269
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729269
+X-ALT-DESC;FMTTYPE=text/html:<p>Please use the files attached here to compl
+ ete this assignment. When you are finished\, please submit your assignment 
+ here and on TEACH to be graded.</p>\n<p> </p>\n<p><strong>Please don't subm
+ it the assignment in zipped format in TEACH . </strong></p>\n<h2>Attachment
+ s</h2>\n<ul>\n<li><a id="" class=" instructure_file_link" title="Assign1Ske
+ leton_updated.zip" href="https://oregonstate.instructure.com/courses/158301
+ 3/files/64335118/download?wrap=1" data-api-endpoint="https://oregonstate.in
+ structure.com/api/v1/courses/1583013/files/64335118" data-api-returntype="F
+ ile">Assign1Skeleton_updated.zip</a></li>\n<li><a id="" class=" instructure
+ _scribd_file instructure_file_link" title="Assignment_1_Instructions_update
+ d-1.pdf" href="https://oregonstate.instructure.com/courses/1583013/files/64
+ 300486/download?wrap=1" data-api-endpoint="https://oregonstate.instructure.
+ com/api/v1/courses/1583013/files/64300486" data-api-returntype="File">Assig
+ nment_1_Instructions_updated-1.pdf</a></li>\n<li><a href="https://oregonsta
+ te.instructure.com/courses/1583013/files/64298360/preview" data-api-endpoin
+ t="https://oregonstate.instructure.com/api/v1/courses/1583013/files/6429836
+ 0" data-api-returntype="File">Assign1Makefile</a></li>\n</ul>
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160410
+DTSTAMP:20160329T185600Z
+DTSTART;VALUE=DATE:20160410
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Quiz #1 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2016)]
+UID:event-assignment-6730326
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=04&year=2016#assignment_6730326
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160410
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160410
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Summary Exercise - Week 2 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_4
+ 00_S2016)]
+UID:event-assignment-6730319
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=04&year=2016#assignment_6730319
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160416
+DTSTAMP:20160325T222200Z
+DTSTART;VALUE=DATE:20160416
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 17 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729279
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729279
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160416
+DTSTAMP:20160325T222300Z
+DTSTART;VALUE=DATE:20160416
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 18 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729280
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729280
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160416
+DTSTAMP:20160325T222300Z
+DTSTART;VALUE=DATE:20160416
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 19 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729281
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729281
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160416
+DTSTAMP:20160325T222300Z
+DTSTART;VALUE=DATE:20160416
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 20 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729282
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729282
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160417
+DTSTAMP:20160325T221800Z
+DTSTART;VALUE=DATE:20160417
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Progamming Assignment 2- Amortized Analysis and Dynamic Array Stack
+  Application [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729267
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729267
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160417
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160417
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Program #2 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2016)]
+UID:event-assignment-6730346
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=04&year=2016#assignment_6730346
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160417
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160417
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Summary Exercise - Week 3 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_4
+ 00_S2016)]
+UID:event-assignment-6730332
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=04&year=2016#assignment_6730332
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160423
+DTSTAMP:20160325T222700Z
+DTSTART;VALUE=DATE:20160423
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 22 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729284
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729284
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160423
+DTSTAMP:20160325T222900Z
+DTSTART;VALUE=DATE:20160423
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 23 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729285
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729285
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160423
+DTSTAMP:20160325T222900Z
+DTSTART;VALUE=DATE:20160423
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 24 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729286
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729286
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160423
+DTSTAMP:20160325T222900Z
+DTSTART;VALUE=DATE:20160423
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 26 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729287
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729287
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160424
+DTSTAMP:20160325T222000Z
+DTSTART;VALUE=DATE:20160424
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Programming Assignment 3  - Circular Linked List [DATA STRUCTURES (
+ CS_261_400_S2016)]
+UID:event-assignment-6729270
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729270
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160424
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160424
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Summary Exercise - Week 4 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_4
+ 00_S2016)]
+UID:event-assignment-6730313
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=04&year=2016#assignment_6730313
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160430
+DTSTAMP:20160325T223300Z
+DTSTART;VALUE=DATE:20160430
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 28 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729288
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729288
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160430
+DTSTAMP:20160325T223400Z
+DTSTART;VALUE=DATE:20160430
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 29 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729289
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=04&year=2016#assignment_6729289
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160501
+DTSTAMP:20160325T223500Z
+DTSTART;VALUE=DATE:20160501
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Midterm_Exam_Spring2016 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729259
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729259
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160501
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160501
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Program #3 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2016)]
+UID:event-assignment-6730347
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=05&year=2016#assignment_6730347
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160501
+DTSTAMP:20160329T185600Z
+DTSTART;VALUE=DATE:20160501
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Quiz #2 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2016)]
+UID:event-assignment-6730312
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=05&year=2016#assignment_6730312
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160501
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160501
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Summary Exercise - Week 5 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_4
+ 00_S2016)]
+UID:event-assignment-6730315
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=05&year=2016#assignment_6730315
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160507
+DTSTAMP:20160325T223600Z
+DTSTART;VALUE=DATE:20160507
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 31 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729291
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729291
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160507
+DTSTAMP:20160325T223600Z
+DTSTART;VALUE=DATE:20160507
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet AVL Practice [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729301
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729301
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160508
+DTSTAMP:20160329T184100Z
+DTSTART;VALUE=DATE:20160508
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Midterm Exam [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2016)]
+UID:event-assignment-6730324
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=05&year=2016#assignment_6730324
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160508
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160508
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Program #4 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2016)]
+UID:event-assignment-6730349
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=05&year=2016#assignment_6730349
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160508
+DTSTAMP:20160325T223100Z
+DTSTART;VALUE=DATE:20160508
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Programming Assignment 4 - Binary Search Trees [DATA STRUCTURES (CS
+ _261_400_S2016)]
+UID:event-assignment-6729271
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729271
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160514
+DTSTAMP:20160325T223700Z
+DTSTART;VALUE=DATE:20160514
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 34 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729294
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729294
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160514
+DTSTAMP:20160325T223700Z
+DTSTART;VALUE=DATE:20160514
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet: 33 Heaps and Priority Queues [DATA STRUCTURES (CS_261_40
+ 0_S2016)]
+UID:event-assignment-6729293
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729293
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160514
+DTSTAMP:20160325T223700Z
+DTSTART;VALUE=DATE:20160514
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet: Heaps Practice [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729303
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729303
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160515
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160515
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Summary Exercise - Week 7 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_4
+ 00_S2016)]
+UID:event-assignment-6730336
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=05&year=2016#assignment_6730336
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160521
+DTSTAMP:20160325T223900Z
+DTSTART;VALUE=DATE:20160521
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 36 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729295
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729295
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160521
+DTSTAMP:20160325T223900Z
+DTSTART;VALUE=DATE:20160521
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 37 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729296
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729296
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160521
+DTSTAMP:20160325T223900Z
+DTSTART;VALUE=DATE:20160521
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 38 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729297
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729297
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160522
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160522
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Program #5 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2016)]
+UID:event-assignment-6730350
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=05&year=2016#assignment_6730350
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160522
+DTSTAMP:20160325T223800Z
+DTSTART;VALUE=DATE:20160522
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Programming Assignment 5 - Heap Implementation of a To-Do List [DAT
+ A STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729272
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729272
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160522
+DTSTAMP:20160329T185600Z
+DTSTART;VALUE=DATE:20160522
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Quiz #3 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2016)]
+UID:event-assignment-6730330
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=05&year=2016#assignment_6730330
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160522
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160522
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Summary Exercise - Week 8 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_4
+ 00_S2016)]
+UID:event-assignment-6730314
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=05&year=2016#assignment_6730314
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160528
+DTSTAMP:20160325T201600Z
+DTSTART;VALUE=DATE:20160528
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 40 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729298
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729298
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160528
+DTSTAMP:20160325T201600Z
+DTSTART;VALUE=DATE:20160528
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 41 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729299
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729299
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160528
+DTSTAMP:20160325T201600Z
+DTSTART;VALUE=DATE:20160528
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 42 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729300
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729300
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160529
+DTSTAMP:20160325T224000Z
+DTSTART;VALUE=DATE:20160529
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Programming Assignment 6 - HashTable Implementation of a Concordanc
+ e [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729273
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=05&year=2016#assignment_6729273
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160529
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160529
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Summary Exercise - Week 9 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_4
+ 00_S2016)]
+UID:event-assignment-6730310
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=05&year=2016#assignment_6730310
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160604
+DTSTAMP:20160325T201600Z
+DTSTART;VALUE=DATE:20160604
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 30 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729290
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=06&year=2016#assignment_6729290
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160604
+DTSTAMP:20160325T201600Z
+DTSTART;VALUE=DATE:20160604
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Worksheet 32 [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729292
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=06&year=2016#assignment_6729292
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160605
+DTSTAMP:20160325T201600Z
+DTSTART;VALUE=DATE:20160605
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Assignment 7 -  Hash Tables and Graphs [DATA STRUCTURES (CS_261_400
+ _S2016)]
+UID:event-assignment-6729263
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=06&year=2016#assignment_6729263
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160605
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160605
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Program 6 (Option A) [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2
+ 016)]
+UID:event-assignment-6730351
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=06&year=2016#assignment_6730351
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160605
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160605
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Program 6 (Option B) [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2
+ 016)]
+UID:event-assignment-6730353
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=06&year=2016#assignment_6730353
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160605
+DTSTAMP:20160329T185600Z
+DTSTART;VALUE=DATE:20160605
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Quiz #4 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2016)]
+UID:event-assignment-6730311
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=06&year=2016#assignment_6730311
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160605
+DTSTAMP:20160326T003800Z
+DTSTART;VALUE=DATE:20160605
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Summary Exercise - Week 10 [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_
+ 400_S2016)]
+UID:event-assignment-6730334
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=06&year=2016#assignment_6730334
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160608
+DTSTAMP:20160325T201600Z
+DTSTART;VALUE=DATE:20160608
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Final Exam [DATA STRUCTURES (CS_261_400_S2016)]
+UID:event-assignment-6729260
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3013&month=06&year=2016#assignment_6729260
+END:VEVENT
+BEGIN:VEVENT
+DTEND;VALUE=DATE:20160608
+DTSTAMP:20160329T184100Z
+DTSTART;VALUE=DATE:20160608
+CLASS:PUBLIC
+SEQUENCE:0
+SUMMARY:Final Exam [COMPUTER ARCH & ASSEM LANGUAGE (CS_271_400_S2016)]
+UID:event-assignment-6730316
+URL:http://oregonstate.instructure.com/calendar?include_contexts=course_158
+ 3014&month=06&year=2016#assignment_6730316
+END:VEVENT
+END:VCALENDAR

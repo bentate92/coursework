@@ -1,0 +1,21 @@
+Array: 0 Sum of max subarray: 34 Elapsed Time: 36 
+Max Sub Array 0: 8 1 3 3 1 -1 -4 -6 2 8 19 
+
+Array: 1 Sum of max subarray: 30 Elapsed Time: 31 
+Max Sub Array 1: 2 9 8 6 5 
+
+Array: 2 Sum of max subarray: 50 Elapsed Time: 24 
+Max Sub Array 2: 23 24 -1 -7 -8 19 
+
+Array: 3 Sum of max subarray: 187 Elapsed Time: 19 
+Max Sub Array 3: 59 26 -53 58 97 
+
+Array: 4 Sum of max subarray: 7 Elapsed Time: 16 
+Max Sub Array 4: 3 2 1 1 
+
+Array: 5 Sum of max subarray: 210 Elapsed Time: 19 
+Max Sub Array 5: 12 99 99 
+
+Array: 6 Sum of max subarray: 6 Elapsed Time: 16 
+Max Sub Array 6: 4 -1 2 1 
+

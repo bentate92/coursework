@@ -1,0 +1,31 @@
+/* CS261- Assignment 7 - Written answers (answers.txt)*/
+/* Name: Benjamin Tate
+ * Date: 6/5/2016
+ * Description: Written answers to questions in the second part
+ */
+
+1)  The graph is stored as a list of vertices and which other vertices
+    they share edges with.
+
+2)  Graphs 2 and 3 are connected, as evidenced by the fact that every
+    pair of vertices in their output shows a path exists.
+
+3)  If the DFSs and BFSs were reversed, there would be no change in the
+    output. However, if the edges were directed, it very well could.
+    For example, in graph 1, vertex 8 only shares an edge with vertex 2.
+    If that edge was directed from 2 to 8, then 8 would of course be 
+    reachable from 2, but 2 would not be reachable from 8.
+
+4)  The main difference between the two is the order in which they
+    traverse a graph. Breadth first-spreads out, while depth-first moves
+    in a line. Because of this, BFS might be faster if the destination 
+    vertex is somewhere near the source, but DFS would be faster if 
+    the destination was very deep into the maze. Advantages and disad-
+    vantages of each are of course dependent on the shape of the graph
+    as well, though. For example, on a very wide graph, a BFS might use
+    too much memory, and on a graph that is more or less a straight
+    line, there might be no difference at all.
+
+5)  The Big O execution time for DFS and BFS is, on average, O(n), 
+    where n is the number of edges in the graph.
+

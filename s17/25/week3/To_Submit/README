@@ -1,0 +1,37 @@
+Project 1 - Group 29
+Eli Goodwin
+Benjamin Tate
+Shae Judge
+CS 325 -- Section 400
+
+GENERAL INFO: 
+This program is intended to demonstrate the differences between 4 different
+styles of algorithms that all find the maximum sum subarray from a given array
+of integers, including at least one positive integer.
+This directory contains files for two separate programs, the experimental 
+program, which was used to test the average runtime, and the maxsum program,
+which was used to read arrays from the test file and output results to a new 
+file. The main functions for these two programs can be found in
+Experimental.cpp and main.cpp, respectively.
+With the experimental program, each algo was run with 20 repetitions each of 10
+different values of n, but note that the values of n found in Experimental.cpp
+may vary from those used for a given algorithm, as they were tweaked for each
+algorithm to provide the most significant results possible within a reasonable
+runtime.
+
+HOW TO RUN:
+Experimental:
+  - After placing the values of n that you want to use in the SIZE_N array in
+    Experimental.cpp, complile the experimental program using 'make exp' (note
+    that you may need to run 'make clean' first if you have compiled exp before)
+  - Next, run exp with the command 'exp #', where # represents the algorithm
+    number that you wish to use
+  - The results will be stored in a file called results.csv
+MaxSum:
+  - Compile the maxsum program using make maxsum
+  - Running with the command 'maxsum' will read the arrays line-by-line from 
+    the file called MSS_TestProblems.txt and then run each of the algorithms
+    on each of those arrays
+  - Results for each algorithm, including the maximum subarray sum, the elapsed
+    time in microseconds, and the array corresponding to the maximum subarray
+    sum, can be found in the file called MSS_TestResults.txt

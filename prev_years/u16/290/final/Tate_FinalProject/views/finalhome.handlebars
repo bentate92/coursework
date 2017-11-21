@@ -1,0 +1,466 @@
+<!--
+ * Name: Benjamin Tate
+ * Date: 8/3/16
+ * Filename: finalhome.handlebars
+ * Class: CS290 - Section 400
+ * Assignment: Final Project
+ * URL: http://52.41.46.3:3040/
+-->
+<!--Build the form to insert new workouts-->
+<form id='dataForm'>
+	<legend>New Workout</legend>
+	<fieldset>
+		<label>Workout Name:
+			<input type='text' id='name' maxlength='255' required>
+		</label>
+		<br>
+		<label>Date:
+			<input type='date' id='date'>
+		</label>
+		<br>
+		<label>Weight:
+			<input type='number' id='weight' maxlength='255'>
+		</label>
+		<br>
+		<label>Units:
+			<label>
+				<input type='radio' name='lbs' id='lbs' value='1' />Pounds</label>
+			<label>
+				<input type='radio' name='lbs' id='kgs' value='0' />Kilograms</label>
+		</label>
+		<br>
+		<label>Reps:
+			<input type='number' id='reps' maxlength='255'>
+		</label>
+		<br>
+		<input type='submit' id='submit' value='Submit' />
+	</fieldset>
+</form>
+<br>
+<!--Build workout table from MySQL query return-->
+<table id='dataTable' border='1'>
+	<thead>
+		<tr id='header'>
+			<th>Name</th>
+			<th>Date</th>
+			<th>Weight</th>
+			<th>Units</th>
+			<th>Reps</th>
+			<th>Edit/Delete</th>
+		</tr>
+	</thead>
+	<tbody id='dataTableBody'>
+		{{#each results}}
+			<tr id='{{this.id}}'>
+				<td>{{this.name}}</td>
+				<td>{{this.date}}</td>
+				<td>{{this.weight}}</td>
+				<td>{{this.unit}}</td>
+				<td>{{this.reps}}</td>
+				<td>
+					<form>
+						<button onclick='editRow(this)' id='edit{{this.id}}' class='edit'>Edit</button>
+						<button onclick='delRow(this)' id='del{{this.id}}' class='del'>Delete</button>
+					</form>
+				</td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
+<script>
+	//Create an event listener for submit button that adds a row to the table
+	document.getElementById('submit').addEventListener('click', function(event) {
+		event.preventDefault();
+		var req = new XMLHttpRequest();
+
+		//Build payload to send to final.js
+		var payload = {id:null, name:null, reps:null, weight:null, date:null, lbs:null};
+		payload.name = document.getElementById('name').value;
+		payload.reps = document.getElementById('reps').value;
+		payload.weight = document.getElementById('weight').value;
+		payload.date = document.getElementById('date').value
+		if(document.getElementById('lbs').checked) {
+			payload.lbs = document.getElementById('lbs').value;
+			payload.unit = 'pounds';
+		} else if(document.getElementById('kgs').checked) {
+			payload.lbs = document.getElementById('kgs').value;
+			payload.unit = 'kilograms';
+		}
+
+		req.open('POST', '/insert', true);
+		req.setRequestHeader('Content-Type', 'application/json');
+
+		req.addEventListener('load', function() {
+			if(req.status >= 200 && req.status < 400) {
+				var response = JSON.parse(req.responseText);
+				var current = payload;
+
+				//Delete all rows of table
+				var tableBody = document.getElementById('dataTableBody');
+				while(tableBody.firstChild) {
+					tableBody.removeChild(tableBody.firstChild);
+				}
+
+				//Rebuild table including new row
+				for(var i = 0; i < response.length; i++) {
+					var currRow = response[i];
+					var row = document.createElement('tr');
+					row.id = currRow.id;
+					tableBody.appendChild(row);
+
+					var name = document.createElement('td');
+					name.textContent = currRow.name;
+					row.appendChild(name);
+
+					var date = document.createElement('td');
+					date.textContent = currRow.date;
+					row.appendChild(date);
+
+					var weight = document.createElement('td');
+					weight.textContent = currRow.weight;
+					row.appendChild(weight);
+
+					var unit = document.createElement('td');
+					unit.textContent = currRow.unit;
+					row.appendChild(unit);
+
+					var reps = document.createElement('td');
+					reps.textContent = currRow.reps;
+					row.appendChild(reps);
+
+					var editDel = document.createElement('td');
+					var EDform = document.createElement('form');
+					var edit = document.createElement('button');
+					edit.onclick = function() {editRow(this)};
+					edit.id = 'edit' + currRow.id;
+					edit.class = 'edit';
+					edit.textContent = 'Edit';
+					var del = document.createElement('button');
+					del.onclick = function() {delRow(this)};
+					del.id = 'del' + currRow.id;
+					del.class = 'del';
+					del.textContent = 'Delete';
+					row.appendChild(editDel);
+					editDel.appendChild(EDform);
+					EDform.appendChild(edit);
+					EDform.appendChild(del);
+				}
+
+				document.getElementById('name').value = '';
+				document.getElementById('date').value = '';
+				document.getElementById('weight').value = '';
+				document.getElementById('lbs').checked = false;
+				document.getElementById('kgs').checked = false;
+				document.getElementById('reps').value = '';
+			} else {
+				console.log("Error in network request: " + request.statusText);
+			}
+		});
+
+		req.send(JSON.stringify(payload));		
+	});
+
+	//Function to delete row from table
+	function delRow(currentRow) {
+		event.preventDefault();
+		var req = new XMLHttpRequest();
+
+		var rowId = currentRow.id;
+		if(typeof(rowId) === 'string') {
+			rowId = rowId.substring(3);
+		}
+		
+		//Sending row ID in query
+		var payload = {id:rowId};
+	
+		req.open('POST', '/delete', true);
+		req.setRequestHeader('Content-Type', 'application/json');
+	
+		req.addEventListener('load', function() {
+			if(req.status >= 200 && req.status < 400) {
+				var response = JSON.parse(req.responseText);
+				var current = payload;
+
+				//Delete all rows of table
+				var tableBody = document.getElementById('dataTableBody');
+				while(tableBody.firstChild) {
+					tableBody.removeChild(tableBody.firstChild);
+				}
+
+				var updateForm = document.getElementById('update'+rowId);
+				if(updateForm != null) {
+					updateForm.parentNode.removeChild(updateForm);
+				}
+
+				//Rebuild table with rows that are left
+				for(var i = 0; i < response.length; i++) {
+					var currRow = response[i];
+					var row = document.createElement('tr');
+					row.id = rowId;
+					tableBody.appendChild(row);
+
+					var name = document.createElement('td');
+					name.textContent = currRow.name;
+					row.appendChild(name);
+
+					var date = document.createElement('td');
+					date.textContent = currRow.date;
+					row.appendChild(date);
+
+					var weight = document.createElement('td');
+					weight.textContent = currRow.weight;
+					row.appendChild(weight);
+
+					var unit = document.createElement('td');
+					unit.textContent = currRow.unit;
+					row.appendChild(unit);
+
+					var reps = document.createElement('td');
+					reps.textContent = currRow.reps;
+					row.appendChild(reps);
+
+					var editDel = document.createElement('td');
+					var EDform = document.createElement('form');
+					var edit = document.createElement('button');
+					edit.onclick = function() {editRow(this)};
+					edit.id = 'edit' + currRow.id;
+					edit.class = 'edit';
+					edit.textContent = 'Edit';
+					var del = document.createElement('button');
+					del.onclick = function() {delRow(this)};
+					del.id = 'del' + currRow.id;
+					del.class = 'del';
+					del.textContent = 'Delete';
+					row.appendChild(editDel);
+					editDel.appendChild(EDform);
+					EDform.appendChild(edit);
+					EDform.appendChild(del);
+				}
+			} else {
+				console.log("Error in network request: " + request.statusText);
+			}
+		});
+	
+		req.send(JSON.stringify(payload));
+	}
+
+	//Function to edit a row of the table
+	function editRow(currentRow) {
+		event.preventDefault();
+		var req = new XMLHttpRequest();
+
+		//Get row ID
+		var rowId = currentRow.id;
+		if(typeof(rowId) === 'string') {
+			rowId = rowId.substring(4);
+		}
+
+		var currRow = document.getElementById('rowId');
+	
+		//Prepare payload with rowId
+		var payload = {id:null, name:null, reps:null, weight:null, date:null, lbs:null};
+		payload.id = rowId;
+
+		req.open('POST', '/edit', true);
+		req.setRequestHeader('Content-Type', 'application/json');
+	
+		req.addEventListener('load', function() {
+			if(req.status >= 200 && req.status < 400) {
+				var response = JSON.parse(req.responseText);
+				var row = response[0];				
+
+				//Create update form at the bottom of the page
+				var lineBr = document.createElement('br');
+				document.body.appendChild(lineBr);
+				var form = document.createElement('form');
+				form.id = 'update' + row.id;
+				document.body.appendChild(form);
+				var legend = document.createElement('legend');
+				legend.textContent = 'Update ' + row.name;
+				form.appendChild(legend);
+				var fieldset = document.createElement('fieldset');
+				form.appendChild(fieldset);
+
+				var label = document.createElement('label');
+				label.textContent = 'Workout Name:';
+				fieldset.appendChild(label);
+				var name = document.createElement('input');
+				name.type = 'text';
+				name.id = 'uName';
+				name.value = row.name;
+				name.maxlength = '255';
+				name.attributes['required'] = "";
+				label.appendChild(name);
+
+				lineBr = document.createElement('br');
+				fieldset.appendChild(lineBr);
+
+				label = document.createElement('label');
+				label.textContent = 'Date:';
+				fieldset.appendChild(label);
+				var date = document.createElement('input');
+				date.type = 'date';
+				date.id = 'uDate';
+				date.value = row.date;
+				label.appendChild(date);
+
+				lineBr = document.createElement('br');
+				fieldset.appendChild(lineBr);
+							
+				label = document.createElement('label');
+				label.textContent = 'Weight:';
+				fieldset.appendChild(label);
+				var weight = document.createElement('input');
+				weight.type = 'number';
+				weight.id = 'uWeight';
+				weight.value = row.weight;
+				weight.maxlength = '255';
+				label.appendChild(weight);
+
+				lineBr = document.createElement('br');
+				fieldset.appendChild(lineBr);
+							
+				label = document.createElement('label');
+				label.textContent = 'Units:';
+				fieldset.appendChild(label);
+				var lbs = document.createElement('input');
+				lbs.type = 'radio';
+				lbs.name = 'lbs';
+				lbs.id = 'uLbs';
+				lbs.value = '1';
+				label.appendChild(lbs);
+				var radios = document.createElement('label')
+				radios.textContent = 'Pounds';
+				label.appendChild(radios);
+				var kgs = document.createElement('input');
+				kgs.type = 'radio';
+				kgs.name = 'lbs';
+				kgs.id = 'uKgs';
+				kgs.value = '0';
+				label.appendChild(kgs);
+				radios = document.createElement('label');
+				radios.textContent = 'Kilograms';
+				label.appendChild(radios);
+
+				if(row.lbs == '1') {
+					lbs.checked = 'checked';
+				} else if(row.lbs == '0') {
+					kgs.checked = 'checked';
+				}
+
+				lineBr = document.createElement('br');
+				fieldset.appendChild(lineBr);
+
+				label = document.createElement('label');
+				label.textContent = 'Reps:';
+				fieldset.appendChild(label);
+				var reps = document.createElement('input');
+				reps.type = 'number';
+				reps.id = 'uReps';
+				reps.value = row.reps;
+				reps.maxlength = '255';
+				label.appendChild(reps);
+
+				lineBr = document.createElement('br');
+				fieldset.appendChild(lineBr);
+				
+				var update = document.createElement('button');
+				update.id = 'update' + row.id;
+				update.textContent = 'Update';
+				//Add event for update form submit button
+				update.onclick = function() {
+					event.preventDefault();
+					var uReq = new XMLHttpRequest();
+					var thisRow = document.getElementById(row.id);
+
+					//Prepare payload
+					var uPayload = {id:null, name:null, date:null, 
+									weight:null, lbs:null, reps:null}
+					uPayload.id = row.id;
+					uPayload.name = document.getElementById('uName').value;
+					uPayload.date = document.getElementById('uDate').value;
+					uPayload.weight = document.getElementById('uWeight').value;
+					if(document.getElementById('uLbs').checked) {
+						uPayload.lbs = '1';
+					} else if (document.getElementById('uKgs').checked) {
+						uPayload.lbs = '0';
+					}
+					uPayload.reps = document.getElementById('uReps').value;
+					uReq.open('POST', '/update', true);
+					uReq.setRequestHeader('Content-Type', 'application/json');
+
+					uReq.addEventListener('load', function() {
+						if(uReq.status >= 200 && uReq.status < 400) {
+							var uResponse = JSON.parse(uReq.responseText);
+							var uCurrent = payload;
+			
+							//Delete table
+							var tableBody = document.getElementById('dataTableBody');
+							while(tableBody.firstChild) {
+								tableBody.removeChild(tableBody.firstChild);
+							}
+			
+							//Rebuild table with updated rows
+							for(var i = 0; i < uResponse.length; i++) {
+								var uCurrRow = uResponse[i];
+								var uRow = document.createElement('tr');
+								uRow.id = uCurrRow.id;
+								tableBody.appendChild(uRow);
+			
+								var uName = document.createElement('td');
+								uName.textContent = uCurrRow.name;
+								uRow.appendChild(uName);
+			
+								var uDate = document.createElement('td');
+								uDate.textContent = uCurrRow.date;
+								uRow.appendChild(uDate);
+			
+								var uWeight = document.createElement('td');
+								uWeight.textContent = uCurrRow.weight;
+								uRow.appendChild(uWeight);
+			
+								var uUnit = document.createElement('td');
+								uUnit.textContent = uCurrRow.unit;
+								uRow.appendChild(uUnit);
+			
+								var uReps = document.createElement('td');
+								uReps.textContent = uCurrRow.reps;
+								uRow.appendChild(uReps);
+			
+								var editDel = document.createElement('td');
+								var EDform = document.createElement('form');
+								var edit = document.createElement('button');
+								edit.onclick = function() {editRow(this)};
+								edit.id = 'edit' + uCurrRow.id;
+								edit.class = 'edit';
+								edit.textContent = 'Edit';
+								var del = document.createElement('button');
+								del.onclick = function() {delRow(this)};
+								del.id = 'del' + uCurrRow.id;
+								del.class = 'del';
+								del.textContent = 'Delete';
+								uRow.appendChild(editDel);
+								editDel.appendChild(EDform);
+								EDform.appendChild(edit);
+								EDform.appendChild(del);
+								var updateForm = document.getElementById('update'+uRow.id);
+								if(updateForm != null) {
+									updateForm.parentNode.removeChild(updateForm);
+								}
+							}
+					 	} else {
+							console.log("Error in network request: " + request.statusText);
+						}
+					});
+				
+					uReq.send(JSON.stringify(uPayload));
+				}
+				fieldset.appendChild(update);
+			} else {
+				console.log("Error in network request: " + request.statusText);
+			}
+		});
+	
+		req.send(JSON.stringify(payload));
+	}
+</script>

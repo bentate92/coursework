@@ -1,0 +1,162 @@
+<html>
+<link href='style.css' rel='stylesheet' type='text/css'/>
+<body>
+
+<table border='1'>
+  <caption>
+    Table 1: Times table from 1-5 (perfect squares are in red)
+  </caption>
+  
+  <tr id='headerRow'>
+    <td class='headerCol'></td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+  </tr>
+  <tr class='oddRow'>
+    <td class='headerCol'>1</td>
+    <td class='square'>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+  </tr>
+  <tr class='evenRow'>
+    <td class='headerCol'>2</td>
+    <td>2</td>
+    <td class='square'>4</td>
+    <td>6</td>
+    <td>8</td>
+    <td>10</td>
+  </tr>
+  <tr class='oddRow'>
+    <td class='headerCol'>3</td>
+    <td>3</td>
+    <td>6</td>
+    <td class='square'>9</td>
+    <td>12</td>
+    <td>15</td>
+  </tr>
+  <tr class='evenRow'>
+    <td class='headerCol'>4</td>
+    <td>4</td>
+    <td>8</td>
+    <td>12</td>
+    <td class='square'>16</td>
+    <td>20</td>
+  </tr>
+  <tr class='oddRow'>
+    <td class='headerCol'>5</td>
+    <td>5</td>
+    <td>10</td>
+    <td>15</td>
+    <td>20</td>
+    <td class='square'>25</td>
+  </tr>
+  <tr>
+    <td colspan='2'>Footer 1</td>
+    <td colspan='4'>Footer 2</td>
+  </tr>
+</table>
+
+<dl>
+  <dt>Favorite food:</dt>
+  <dd>Milksteak</dd>
+  <dt>Favorite hobby:</dt>
+  <dd>Magnets</dd>
+  <dt>Likes:</dt>
+  <dd>Ghouls</dd>
+  <dt>Dislikes:</dt>
+  <dd>Peoples' knees</dd>
+</dl>
+
+<div class='outer-content'>
+  <div class='inner-content'>
+    <text>Look at my divs!</text>
+  </div>
+</div>
+
+<form action='http://classes.engr.oregonstate.edu/eecs/winter2015/cs290-400/tools/class-content/form_tests/check_request.php' method='get'>
+  <fieldset>
+    <legend>A basic GET form</legend>
+    <fieldset>
+      <label>Text:
+        <input type='text' name='text' size='30' maxlength='100'>
+      </label>
+    </fieldset>
+    <div class='formbreak'></div>
+    <fieldset>
+      <label>Number:
+        <input type='number' name='number' size='30' maxlength='100'>
+      </label>
+    </fieldset>
+    <div class='formbreak'></div>
+    <fieldset>
+      <label>Password:
+        <input type='password' name='password' size='30' maxlength='100'>
+      </label>
+    </fieldset>
+    <div class='formbreak'></div>
+    <fieldset>
+      <label>Which candy is best?
+        <div class='formbreak'></div>
+        <label>
+          <input type='radio' name='candy' value='snickers' />Snickers</label>
+        <div class='formbreak'></div>
+        <label>
+          <input type='radio' name='candy' value='skittles' />Skittles</label>
+        <div class='formbreak'></div>
+        <label>
+          <input type='radio' name='candy' value='mentos' />Mentos</label>
+      </label>
+      <div class='formbreak'></div>
+      <input type='submit' value='Submit' />
+    </fieldset>
+  </fieldset>
+</form>
+
+<br />
+
+<form action='http://classes.engr.oregonstate.edu/eecs/winter2015/cs290-400/tools/class-content/form_tests/check_request.php' method='post'>
+  <fieldset>
+    <legend>A basic POST form</legend>
+    <fieldset>
+      <label>Text:
+        <input type='text' name='text' size='30' maxlength='100'>
+      </label>
+    </fieldset>
+    <div class='formbreak'></div>
+    <fieldset>
+      <label>Number:
+        <input type='number' name='number' size='30' maxlength='100'>
+      </label>
+    </fieldset>
+    <div class='formbreak'></div>
+    <fieldset>
+      <label>Password:
+        <input type='password' name='password' size='30' maxlength='100'>
+      </label>
+    </fieldset>
+    <div class='formbreak'></div>
+    <fieldset>
+      <label>Which candy is best?
+        <div class='formbreak'></div>
+        <label>
+          <input type='radio' name='candy' value='snickers' />Snickers</label>
+        <div class='formbreak'></div>
+        <label>
+          <input type='radio' name='candy' value='skittles' />Skittles</label>
+        <div class='formbreak'></div>
+        <label>
+          <input type='radio' name='candy' value='mentos' />Mentos</label>
+      </label>
+      <div class='formbreak'></div>
+      <input type='submit' value='Submit' />
+    </fieldset>
+  </fieldset>
+</form>
+
+</body>
+</html>

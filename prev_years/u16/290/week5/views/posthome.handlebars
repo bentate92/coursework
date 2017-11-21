@@ -1,0 +1,16 @@
+<!--
+ - Name: Benjamin Tate
+ - Date: 7/24/16
+ - Filename: posthome.handlebars
+ - Class: CS290 - Section 400
+ - Assignment: GET and POST checker
+ - URL: http://52.41.46.3:3030/
+-->
+
+<h1>POST Request Received</h1>
+<p>The following data was received:</p>
+<ul>
+	{{#each things}}
+		<li>{{this.name}}: {{this.value}}
+	{{/each}}
+</ul>

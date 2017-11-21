@@ -1,0 +1,211 @@
+<!--
+<form id='dataForm' action='http://classes.engr.oregonstate.edu/eecs/winter2015/cs290-400/tools/class-content/form_tests/check_request.php' method='post'>
+<form id='dataForm' action='/insert' method='post'>
+-->
+<form id='dataForm'>
+	<legend>New Workout</legend>
+	<fieldset>
+		<label>Workout Name:
+			<input type='text' id='name' maxlength='255' required>
+		</label>
+		<br>
+		<label>Date (yyyy-mm-dd):
+			<input type='date' id='date'>
+		</label>
+		<br>
+		<label>Weight:
+			<input type='number' id='weight' maxlength='255'>
+		</label>
+		<br>
+		<label>Units:
+			<label>
+				<input type='radio' name='lbs' id='lbs' value='1' />Pounds</label>
+			<label>
+				<input type='radio' name='lbs' id='kgs' value='0' />Kilograms</label>
+		</label>
+		<br>
+		<label>Reps:
+			<input type='number' id='reps' maxlength='255'>
+		</label>
+		<br>
+		<input type='submit' id='submit' value='Submit' />
+	</fieldset>
+</form>
+<br>
+<table id='dataTable' border='1'>
+	<thead>
+		<tr id='header'>
+			<th>Name</th>
+			<th>Date</th>
+			<th>Weight</th>
+			<th>Units</th>
+			<th>Reps</th>
+			<th>Edit/Delete</th>
+		</tr>
+	</thead>
+	<tbody id='dataTableBody'>
+		{{#each results}}
+			<tr id="{{this.id}}">
+<!--	
+				<input type='hidden' name='id' value={{this.id}}>
+-->
+				<td>{{this.name}}</td>
+				<td>{{this.date}}</td>
+				<td>{{this.weight}}</td>
+				<td>{{this.unit}}</td>
+				<td>{{this.reps}}</td>
+				<td>
+					<form>
+						<button onclick='editRow(this)' class='edit'>Edit</button>
+						<button onclick='delRow(this)' class='del'>Delete</button>
+					</form
+				</td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
+<script>
+	document.getElementById('submit').addEventListener('click', function(event) {
+		event.preventDefault();
+		var req = new XMLHttpRequest();
+
+		var payload = {name:null, reps:null, weight:null, date:null, lbs:null};
+		payload.name = document.getElementById('name').value;
+		payload.reps = document.getElementById('reps').value;
+		payload.weight = document.getElementById('weight').value;
+		payload.date = document.getElementById('date').value
+		if(document.getElementById('lbs').checked) {
+			payload.lbs = document.getElementById('lbs').value;
+			payload.unit = 'pounds';
+		} else if(document.getElementById('kgs').checked) {
+			payload.lbs = document.getElementById('kgs').value;
+			payload.unit = 'kilograms';
+		}
+
+		req.open('POST', '/insert', true);
+		req.setRequestHeader('Content-Type', 'application/json');
+
+		req.addEventListener('load', function() {
+			if(req.status >= 200 && req.status < 400) {
+				var response = JSON.parse(req.responseText);
+
+				var table = document.getElementById('dataTableBody');
+
+				var current = payload;
+				current.id = response.length;
+				console.log("current.id = " + current.id);
+
+				var newRow = document.createElement('tr');
+				newRow.id = current.id;
+				table.appendChild(newRow);
+
+				var name = document.createElement('td');
+				name.textContent = current.name;
+				newRow.appendChild(name);
+
+				var date = document.createElement('td');
+				date.textContent = current.date;
+				newRow.appendChild(date);
+
+				var weight = document.createElement('td');
+				weight.textContent = current.weight;
+				newRow.appendChild(weight);
+
+				var unit = document.createElement('td');
+				unit.textContent = current.unit;		
+				newRow.appendChild(unit);
+
+				var reps = document.createElement('td');
+				reps.textContent = current.reps;
+				newRow.appendChild(reps);
+
+				var editDel = document.createElement('td');
+				var EDform = document.createElement('form');
+				var edit = document.createElement('button');
+				edit.onclick = editRow(newRow);
+				edit.class = 'edit';
+				edit.textContent = 'Edit';
+				var del = document.createElement('button');
+				del.onclick = delRow(newRow);
+				del.class = 'del';
+				del.textContent = 'Delete';
+				newRow.appendChild(editDel);
+				editDel.appendChild(EDform);
+				EDform.appendChild(edit);
+				EDform.appendChild(del);
+
+				document.getElementById('name').value = '';
+				document.getElementById('date').value = '';
+				document.getElementById('weight').value = '';
+				document.getElementById('lbs').checked = false;
+				document.getElementById('kgs').checked = false;
+				document.getElementById('reps').value = '';
+			} else {
+				console.log("Error in network request: " + request.statusText);
+			}
+		});
+
+		req.send(JSON.stringify(payload));		
+	});
+
+function delRow(currentRow) {
+	event.preventDefault();
+	console.log('Starting delRow()');
+	var rowId = currentRow.id;
+
+	var req = new XMLHttpRequest();
+	var payload = {id:null};
+
+	payload.id = rowId;
+
+	console.log('Opening request');
+	req.open('POST', '/delete', true);
+	req.setRequestHeader('Content-Type', 'application/json');
+	console.log('Request open');
+
+	req.addEventListener('load', function() {
+		if(req.status >= 200 && req.status < 400) {
+			console.log('Inside load event listener');
+			var response = JSON.parse(req.responseText);
+
+			var current = payload;
+			var row = document.getElementById(current.id).parentNode;
+			row.parentNode.removeChild(row);
+		} else {
+			console.log("Error in network request: " + request.statusText);
+		}
+	});
+}
+	
+function editRow(currentRow) {
+	var rowId = currentRow.id;
+}
+
+//	var delButtons = document.getElementsByClassName('del');
+//	for(var i = 0; i < delButtons.length; i++) {
+//		delButtons.addEventListener('click', function(event) {
+//			event.preventDefault();
+//			var req = new XMLHttpRequest();
+//			var payload = {id:null};
+//	
+//			payload.id = i + 1;
+//
+//			req.open('POST', '/delete', true);
+//			req.setRequestHeader('Content-Type', 'application/json');
+//	
+//			req.addEventListener('load', function() {
+//				if(req.status >= 200 && req.status < 400) {
+//					var response = JSON.parse(req.responseText);
+//
+//					var current = payload;
+//					var row = document.getElementById(current.id);
+//					row.parentNode.removeChild(row);
+//				} else {
+//					console.log("Error in network request: " + request.statusText);
+//				}
+//			});
+//	
+//			req.send(JSON.stringify(payload));		
+//		});
+//	}
+</script>
