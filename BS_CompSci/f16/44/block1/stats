@@ -1,0 +1,192 @@
+#Name: Benjamin Tate
+#Date: 10/11/2016
+#Class: CS344
+#Assignment: Prog1
+#Description: Script to find means and medians of rows or columns of a matrix of integers
+
+#!/bin/bash
+
+#Function cleanup removes temp files
+function cleanup {
+    rm -rf datafile*
+}
+#Trap statement calls cleanup before exiting to remove any temp files
+trap cleanup EXIT
+
+#Create file variable to hold input files through argument or stdin
+file="datafile$$"
+
+#If only 1 arg (row/col option) assign file from stdin
+if [ $# -eq 1 ]
+then
+    cat > "$file"
+#Else if 2 args, store second as file
+elif [ $# -eq 2 ]
+then
+    file=$2
+#Else if too few or too many args, throw usage error and exit
+else
+    echo 'Usage: stats {-rows|-cols} [file]' >&2
+    exit 1 
+fi
+
+#If file is not readable, throw error and exit
+if [ ! -r $file ]
+then
+    echo "stats: unable to read $file" >&2
+    exit 1
+#Else if file is empty, throw error and exit
+elif [ ! -s $file ]
+then 
+    echo "stats: file is empty" >&2
+    exit 1
+fi
+
+#If option starts with lowercase r
+if [ ${1:0:2} = "-r" ]
+then
+    #Print header
+    printf "Average Median\n"
+    
+    #Read file line-by-line
+    while IFS= read -r line
+    do
+        #Initialize sum and count
+        sum=0
+        count=0
+        #Create sorted string
+        ord=$(echo $line | tr " " "\n" | sort -n) 
+
+        #Loop through each row
+        for i in $line
+        do 
+            #Increment count to keep track of number of columns
+            count=$((count + 1))
+            #Add current number to sum
+            sum=$((sum + i))
+        done
+
+        #Calculate average from sum and count, rounding to nearest integer
+        avg=$(( (sum + (count / 2)) / count))
+    
+        #Find midpoint of row
+        mid=$(((count / 2) + 1))
+        #Initialize counter to keep track of where in the row process is
+        ctr=0
+
+        #Loop through the ordered row
+        for j in $ord
+        do
+            #Increment counter
+            ctr=$((ctr + 1))
+            #When counter matches midpoint, set median to current num
+            if [ $ctr -eq $mid ]
+            then
+                med=$j
+            fi
+        done
+
+        #Print avg and med for row
+        printf "$avg       $med\n"
+    done <"$file"
+#Else if option starts with lowercase c
+elif [ ${1:0:2} = "-c" ]
+then
+    #Initialize rowCount to keep track of number of rows
+    rowCount=0
+    #Read file, line-by-line, to count rows and columns
+    while IFS= read -r line
+    do
+        #Initialize colCount to keep track of number of columns
+        colCount=0
+        #Increment rowCount
+        rowCount=$((rowCount + 1))
+
+        #Loop through each number in current row
+        for i in $line
+        do
+            #Increment colCount
+            colCount=$((colCount + 1))
+        done
+    done <"$file"
+
+    #Initialize currCol to keep track of column traversal
+    currCol=1
+    #Initialize strings to hold averages and medians of all columns
+    avgs=""
+    meds=""
+
+    #Loop through for each column
+    while [ $currCol -le $colCount ]
+    do
+        #Initialize string to hold contents of current column
+        contents=""
+
+        #Read through file, line-by-line, to build contents string
+        while IFS= read -r line
+        do
+            #Initialize iterator to move to correct position on each row
+            i=1
+
+            #Loop through numbers in current row
+            for num in $line
+            do
+                #Add number from current column to contents string
+                if [ $i -eq $currCol ]
+                then
+                    contents="$contents$num "
+                fi
+            
+                #Increment i
+                i=$((i + 1))
+            done
+        done <"$file"
+        
+        #Sort contents string
+        ord=$(echo $contents | tr " " "\n" | sort -n) 
+
+        #Initialize sum
+        sum=0
+        #Find midpoint of column
+        mid=$(((rowCount / 2) + 1))
+        #Initialize counter to keep track of where in the col the process is
+        ctr=0
+
+        #Loop through each number in ord
+        for j in $ord
+        do
+            #Increment ctr
+            ctr=$((ctr + 1))
+
+            #Add current number to sum
+            sum=$((sum + j))
+            
+            #When midpoint is reached, set median
+            if [ $ctr -eq $mid ]
+            then
+                med=$j
+            fi
+        done
+
+        #Calculate average, rounding to nearest integer
+        avg=$(((sum + (rowCount / 2)) / rowCount))
+
+        #Add current column avg and med to respective strings
+        avgs="$avgs$avg       "
+        meds="$meds$med       "
+
+        #Increment currCol
+        currCol=$((currCol + 1))
+    done
+
+    #Print avgs and meds in format
+    echo "Averages:"
+    printf "$avgs\n"
+    echo "Medians:"
+    printf "$meds\n"
+#Else invalid option was provided - throw usage error and exit
+else
+    echo 'Usage: stats {-rows|-cols} [file]' >&2
+    exit 1
+fi
+
